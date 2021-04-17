@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         addPreviewButton.isHidden = true
         
         // Set the scrollView's frame to be the size of the screen
-        scrollView = UIScrollView(frame: CGRect(x: 10, y: 505, width: view.frame.width, height: view.frame.height))
+        scrollView = UIScrollView(frame: CGRect(x: 10, y: 508, width: view.frame.width, height: view.frame.height))
         // scrollView.backgroundColor = .systemTeal
         // Set the contentSize to 5 times the height of the phone's screen so that
         scrollView.contentSize = CGSize(width: scrollView.contentSize.width-10, height: UIScreen.main.bounds.height*5)
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func spinYuxiPreview(_ sender: Any) {
         let randomIndex = Int.random(in: 2...157)
         
-        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { timer in
             let randomNumber = Int.random(in: 2...157)
             self.yuxiPreviewImage.image = UIImage(named: "image-\(randomNumber)")
 
